@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'style-paths/theme-variables.scss';
+@import 'style-paths/theme';
+
+
+
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    background-color: $grey-dark;
+    color: $white;
+    font-family: $primary-font;
+    overflow-x: hidden;
+}
+
+h1, h2 {
+    font-family: $heading-font;
+    font-weight: $heading-bold;
+    text-transform: uppercase;
+}
+
+p, a {
+    font-family: $primary-font;
+    font-weight: $primary-regular;
+}
+
+.highlight-txt {
+    color: $primary-orange !important;
+}

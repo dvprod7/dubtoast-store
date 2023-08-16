@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto+Condensed:ital@1&family=Roboto:ital,wght@0,300;0,500;1,100;1,500&display=swap');
+
+//Font Definitions
+$heading-font: 'Oswald', sans-serif;
+$primary-font: 'Roboto', sans-serif;
+$secondary-font: 'Roboto Condensed', sans-serif;
+$heading-bold: 700;
+$primary-thin: 100;
+$primary-regular: 300;
+$primary-bold: 500;
+$secondary-bold: 400;
+
+//Color definitions
+    
+$primary-orange: #DD6031;
+$secondary-orange: #DB4107;
+$secondary-blue: #00B4D8;
+$grey-dark: #333333;
+$grey-light: #46494C;
+$white: #FBFFFE;
+$black: #000;
+$red: #C63A39;
+
+/**
+ * ::::::: Media Width
+ */
+ @mixin m360  { @media (min-width: 360px)  { @content; } }
+ @mixin m450  { @media (min-width: 450px)  { @content; } }
+ @mixin m576  { @media (min-width: 576px)  { @content; } }
+ @mixin m600  { @media (min-width: 600px)  { @content; } }
+ @mixin m650  { @media (min-width: 650px)  { @content; } }
+ @mixin m768  { @media (min-width: 768px)  { @content; } }
+ @mixin m800  { @media (min-width: 800px)  { @content; } }
+ @mixin m900  { @media (min-width: 900px)  { @content; } }
+ @mixin m992  { @media (min-width: 992px)  { @content; } }
+ @mixin m1200 { @media (min-width: 1200px) { @content; } }
+ @mixin m1300 { @media (min-width: 1300px) { @content; } }
+ @mixin m1400 { @media (min-width: 1400px) { @content; } }
+ @mixin m1800 { @media (min-width: 1800px) { @content; } }
+ @mixin m2200 { @media (min-width: 2200px) { @content; } }
+
+ /**
+  * ::::::: Media Height
+  */
+ @mixin h360  { @media (min-height: 360px)  { @content; } }
+ @mixin h450  { @media (min-height: 450px)  { @content; } }
+ @mixin h576  { @media (min-height: 576px)  { @content; } }
+ @mixin h600  { @media (min-height: 600px)  { @content; } }
+ @mixin h650  { @media (min-height: 650px)  { @content; } }
+ @mixin h768  { @media (min-height: 768px)  { @content; } }
+ @mixin h800  { @media (min-height: 800px)  { @content; } }
+ @mixin h900  { @media (min-height: 900px)  { @content; } }
+ @mixin h992  { @media (min-height: 992px)  { @content; } }
+ @mixin h1200 { @media (min-height: 1200px) { @content; } }
+ @mixin h1400 { @media (min-height: 1400px) { @content; } }
+ @mixin h1800 { @media (min-height: 1800px) { @content; } }
+ @mixin h2200 { @media (min-height: 2200px) { @content; } }
