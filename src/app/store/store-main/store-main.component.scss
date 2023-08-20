@@ -1,0 +1,22 @@
+@import 'theme-variables.scss';
+
+.main-store {
+    .store-heading {
+        position: relative;
+        padding-top: 4rem;
+        h1 {
+            font-size: 80px;
+            margin: 0;
+        }
+        .sub-heading {
+            position: absolute;
+            top: 10%;
+            color: $primary-orange;
+            font-size: 26px;
+            margin: 0;
+            @include m576 {
+                top: 23%;
+            }
+        }
+    }
+}

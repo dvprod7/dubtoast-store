@@ -1,0 +1,93 @@
+[
+    {
+      "name": "Cinematic Space Sound",
+      "price": 5,
+      "tags": [
+        "cinematic", "dark", "pads"
+      ],
+      "image": "/assets/product_temp.jpg",
+      "altimg": "producto 1",
+      "infotitle": "BEST PACK FOR YOUR MUSIC OR VIDEO",
+      "infopack": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "packincludes": [
+        "5 dark pads, 4 drum samples, 10 vocal chops, 4 piano samples"
+      ],
+      "excerpt": "Lorem ipsum dolor sit amet... 1"
+    },
+    {
+      "name": "Cinematic Action Sound 2",
+      "price": 8,
+      "tags": [
+        "cinematic", "games", "pads"
+      ],
+      "image": "/assets/product_temp.jpg",
+      "altimg": "producto 3",
+      "infotitle": "BEST PACK FOR YOUR VIDEO GAME OR VIDEO",
+      "infopack": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "packincludes": [
+        "10 pads, 8 drum samples, 10 vocal chops, 6 piano samples"
+      ],
+      "excerpt": "Lorem ipsum dolor sit amet... 2"
+    },
+    {
+      "name": "Drum Kit dark",
+      "price": 3,
+      "tags": [
+        "drumkits", "dark"
+      ],
+      "image": "/assets/product_temp.jpg",
+      "altimg": "producto 3",
+      "infotitle": "BEST DRUM KIT TO START",
+      "infopack": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "packincludes": [
+        "8 drum samples, 2 Hi-Hats, 5 Kicks, 4 Snares"
+      ],
+      "excerpt": "Lorem ipsum dolor sit amet... 3"
+    },
+    {
+      "name": "Drum Kit 2",
+      "price": 6,
+      "tags": [
+        "drumkits", "dark"
+      ],
+      "image": "/assets/product_temp.jpg",
+      "altimg": "producto 3",
+      "infotitle": "BEST DRUM KIT TO START",
+      "infopack": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "packincludes": [
+        "8 drum samples, 2 Hi-Hats, 5 Kicks, 4 Snares"
+      ],
+      "excerpt": "Lorem ipsum dolor sit amet... 3"
+    },
+    {
+      "name": "Drum Kit 3",
+      "price": 7,
+      "tags": [
+        "drumkits", "dark"
+      ],
+      "image": "/assets/product_temp.jpg",
+      "altimg": "producto 3",
+      "infotitle": "BEST DRUM KIT TO START",
+      "infopack": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "packincludes": [
+        "8 drum samples, 2 Hi-Hats, 5 Kicks, 4 Snares"
+      ],
+      "excerpt": "Lorem ipsum dolor sit amet... 3"
+    },
+    {
+      "name": "Drum Kit 4",
+      "price": 11,
+      "tags": [
+        "drumkits", "dark"
+      ],
+      "image": "/assets/product_temp.jpg",
+      "altimg": "producto 3",
+      "infotitle": "BEST DRUM KIT TO START",
+      "infopack": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "packincludes": [
+        "8 drum samples, 2 Hi-Hats, 5 Kicks, 4 Snares"
+      ],
+      "excerpt": "Lorem ipsum dolor sit amet... 3"
+    }
+  ]
+  

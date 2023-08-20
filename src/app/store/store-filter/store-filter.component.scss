@@ -1,0 +1,85 @@
+@import 'theme-variables.scss';
+
+.store-filter {
+    margin-top: 2rem;
+
+    .txt-input {
+        label {
+            font-family: $primary-font;
+            font-weight: $primary-thin;
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+        .input-field {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            svg {
+                position: absolute;
+                top: 13px;
+                left: 15px;
+                path {
+                    fill: $secondary-blue;
+                }
+            }
+        }
+        input {
+            font-family: $primary-font;
+            font-weight: $primary-thin;
+            color: $white;
+            opacity: 1;
+            outline: none;
+            border: 2px solid $primary-orange;
+            background-color: rgba($color: #fff, $alpha: 0);
+            padding: 0.7rem 0.7rem 0.7rem 3rem;
+            width: 100%;
+            &:focus {
+                color: $white;
+                outline: none;
+            }
+        }
+    }
+
+    .shortcuts-input {
+        margin-top: 0.5rem;
+        h5 {
+            font-family: $primary-font;
+            font-weight: $primary-thin;
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+        ul {
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+            column-gap: 10px;
+            row-gap: 10px;
+            padding: 0;
+            li {
+                white-space: nowrap;
+                list-style: none;
+                position: relative;
+                clear: both;
+                padding: 0;
+                cursor: pointer;
+                div {
+                    background-color: $primary-orange;
+                    font-weight: $primary-thin;
+                    font-size: 1.2rem;
+                    padding: 8px;
+                    &.active {
+                        background-color: $secondary-blue;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+
+    .filter-load {
+        margin-top: 2rem;
+        @include m576 {
+            margin-top: 0;
+        }
+    }
+}

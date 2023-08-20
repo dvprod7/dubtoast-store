@@ -13,9 +13,6 @@
         h1 {
             font-size: 60px;
             margin: 0;
-            span {
-                color: $primary-orange;
-            }
             @include m576 { 
                 font-size: 100px;
             }

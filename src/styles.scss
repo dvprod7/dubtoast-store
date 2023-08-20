@@ -2,7 +2,9 @@
 @import 'style-paths/theme-variables.scss';
 @import 'style-paths/theme';
 
-
+html {
+    scroll-behavior: smooth;
+}
 
 html, body {
     overflow-x: hidden;
@@ -12,7 +14,6 @@ body {
     background-color: $grey-dark;
     color: $white;
     font-family: $primary-font;
-    overflow-x: hidden;
 }
 
 h1, h2 {
