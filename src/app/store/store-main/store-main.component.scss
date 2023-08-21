@@ -14,7 +14,10 @@
             color: $primary-orange;
             font-size: 26px;
             margin: 0;
-            @include m576 {
+            @include m576 { 
+                top: 13%;
+            }
+            @include m992 {
                 top: 23%;
             }
         }
