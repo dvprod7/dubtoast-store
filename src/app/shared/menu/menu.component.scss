@@ -172,6 +172,7 @@
         font-size: 1.5rem;
         position: relative;
         transition: all 0.3s ease;
+        cursor: pointer;
         &::after {
             opacity: 0;
             content: '';
@@ -187,6 +188,17 @@
                 width: 100%;
                 transition: all 0.3s ease;
             }
+        }
+    }
+    .menu-element.active {
+        &::after {
+            opacity: 1;
+            content: '';
+            width: 100%;
+            border-top: 2px solid $primary-orange;
+            position: absolute;
+            left: 0;
+            bottom: -4px;
         }
     }
 

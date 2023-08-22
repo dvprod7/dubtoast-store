@@ -1,0 +1,61 @@
+<section class="login-section">
+    <div class="container">
+        <div class="row">
+            <div class="login-heading">
+                <p class="sub-heading">[{{ subtxt }}]</p>
+                <h1>
+                    {{ headingtxt }}<span class="highlight-txt">//</span>
+                </h1>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6">
+                <div class="main-form">
+                    <div class="login-form" [class.submitOK]="loginOk" *ngIf="!registerOpen; else registerForm">
+                        <form (ngSubmit)="onLogin()" #loginForm="ngForm">
+                            <div class="input-group">
+                                <input placeholder="email" type="email" name="email" required id="email" [(ngModel)]="login.email">
+                            </div>
+                            <div class="input-group">
+                                <input placeholder="password" type="password" name="password" required id="password" [(ngModel)]="login.password">
+                            </div>
+                            <button [disabled]="loginForm.invalid" type="submit" class="form-btn">Login</button>
+                        </form>
+                        <div class="openform-link">
+                            <p>
+                                Not a member yet? <a (click)="loadRegisterForm()">click here</a> 
+                            </p>
+                        </div>
+                    </div>
+                    <ng-template #registerForm>
+                        <div class="register-form">
+                            <form (ngSubmit)="onRegister()" #registerForm="ngForm">
+                                <div class="input-group">
+                                    <input placeholder="your full name" type="text" name="name" required id="name" [(ngModel)]="register.name">
+                                </div>
+                                <div class="input-group">
+                                    <input placeholder="email" type="email" name="email" required id="email" [(ngModel)]="register.email">
+                                </div>
+                                <div class="input-group">
+                                    <input placeholder="password" type="password" name="password" required id="password" [(ngModel)]="register.password">
+                                </div>
+                                <div class="input-group">
+                                    <input placeholder="your phone number (optional)" type="tel" name="phone" id="phone" [(ngModel)]="register.phone">
+                                </div>
+                                <button [disabled]="registerForm.invalid" type="submit" class="form-btn">Register</button>
+                            </form>
+                            <div class="openform-link">
+                                <p>
+                                    Already an user? <a (click)="loadLoginForm()">click here</a> 
+                                </p>
+                            </div>
+                        </div>
+                    </ng-template>
+                </div>
+                <div class="success-mesg" *ngIf="loginOk == true">
+                    <h3 class="text-center">You are registered now</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -8,4 +8,5 @@ import { Component, Input } from '@angular/core';
 export class CtaButtonComponent {
   @Input() buttonText: string = '';
   @Input() buttonClass: string = '';
+  @Input() buttonURL: string = '';
 }

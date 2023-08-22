@@ -2,17 +2,19 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeBannerComponent } from './home-banner/home-banner.component';
 import { SharedModule } from 'app/shared/shared.module';
+import { HomeComponent } from './home.component';
 
 @NgModule({
   declarations: [
-    HomeBannerComponent
+    HomeBannerComponent,
+    HomeComponent
   ],
   imports: [
     CommonModule,
     SharedModule
   ],
   exports: [
-    HomeBannerComponent
+    HomeComponent
   ]
 })
 export class HomeModule { }

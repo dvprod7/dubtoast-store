@@ -1,0 +1,79 @@
+@import 'theme-variables.scss';
+
+.login-section {
+    position: relative;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    h1 {
+        font-size: 80px;
+        margin: 0;
+    }
+    .sub-heading {
+        position: absolute;
+        top: -5%;
+        color: $primary-orange;
+        font-size: 26px;
+        margin: 0;
+    }
+    .success-mesg {
+        h3 {
+            font-family: $heading-font;
+            font-size: 4rem;
+            text-transform: uppercase;
+        }
+    }
+
+    .main-form {
+        margin-top: 2rem;
+        .submitOK {
+            display: none !important;
+        }
+        .input-group {
+            input {
+                width: 100%;
+                margin-bottom: 1rem;
+                border-radius: 0;
+                border: none;
+                outline: none;
+                border-bottom: 2px solid $primary-orange;
+                background-color: rgba($color: $white, $alpha: 0);
+                color: $white;
+                padding: 1.5rem 0;
+                font-weight: $primary-thin;
+                font-size: 1.6rem;
+            }
+        }
+        .form-btn {
+            margin-top: 1.8rem;
+            cursor: pointer;
+            text-align: center;
+            width: 100%;
+            background-color: $primary-orange;
+            border: none;
+            padding: 0.5rem;
+            transition: all 0.3s ease;
+            font-family: $heading-font;
+            text-transform: uppercase;
+            color: $white;
+            &:hover {
+                transition: all 0.3s ease;
+                background-color: $secondary-orange;
+            }
+            &:disabled {
+                background-color: $grey-light;
+            }
+        }
+        .openform-link {
+            p {
+                padding-top: 3rem;
+                width: 100%;
+                text-align: center;
+                a {
+                    color: $primary-orange;
+                    font-weight: bold;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

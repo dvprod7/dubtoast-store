@@ -4,6 +4,7 @@ import { MenuComponent } from './menu/menu.component';
 import { FooterComponent } from './footer/footer.component';
 import { CtaButtonComponent } from './cta-button/cta-button.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -15,7 +16,8 @@ import { ProductListComponent } from './product-list/product-list.component';
     ProductListComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [MenuComponent, FooterComponent, CtaButtonComponent, ProductListComponent]
 })
