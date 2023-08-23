@@ -5,8 +5,11 @@
     margin-top: 4rem;
     margin-bottom: 4rem;
     h1 {
-        font-size: 80px;
+        font-size: 60px;
         margin: 0;
+        @include m576 {
+            font-size: 80px;
+        }
     }
     .sub-heading {
         position: absolute;

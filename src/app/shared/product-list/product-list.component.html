@@ -37,7 +37,7 @@
                 </li>
             </ul>
             <hr />
-            <button class="add-cart-btn">
+            <button class="add-cart-btn" (click)="onSelectProduct(product)">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6.25 15C6.94036 15 7.5 15.5597 7.5 16.25C7.5 16.9403 6.94036 17.5 6.25 17.5C5.55964 17.5 5 16.9403 5 16.25C5 15.5597 5.55964 15 6.25 15Z" stroke="#FBFFFE" stroke-width="0.875"/>
                     <path d="M13.75 15.0001C14.4403 15.0001 15 15.5597 15 16.2501C15 16.9405 14.4403 17.5001 13.75 17.5001C13.0597 17.5001 12.5 16.9405 12.5 16.2501C12.5 15.5597 13.0597 15.0001 13.75 15.0001Z" stroke="#FBFFFE" stroke-width="0.875"/>
@@ -74,7 +74,7 @@
                                     </li>
                                 </ul>
                                 <h3 class="main-price">${{ product.price }}</h3>
-                                <button class="add-cart-btn" data-bs-dismiss="modal">
+                                <button class="add-cart-btn" data-bs-dismiss="modal" (click)="onSelectProduct(product)">
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M6.25 15C6.94036 15 7.5 15.5597 7.5 16.25C7.5 16.9403 6.94036 17.5 6.25 17.5C5.55964 17.5 5 16.9403 5 16.25C5 15.5597 5.55964 15 6.25 15Z" stroke="#FBFFFE" stroke-width="0.875"/>
                                         <path d="M13.75 15.0001C14.4403 15.0001 15 15.5597 15 16.2501C15 16.9405 14.4403 17.5001 13.75 17.5001C13.0597 17.5001 12.5 16.9405 12.5 16.2501C12.5 15.5597 13.0597 15.0001 13.75 15.0001Z" stroke="#FBFFFE" stroke-width="0.875"/>
@@ -98,6 +98,16 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <!-- Toast Message -->
+    <div [id]="'productToast--' + product.id" class="toast" [class.show]="alertMsg" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <span class="me-auto">Product Added</span>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            <span>You purchased {{ product.name }}</span>
         </div>
     </div>
 </div>

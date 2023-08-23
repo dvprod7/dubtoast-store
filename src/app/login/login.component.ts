@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -6,6 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
+
+  ngOnInit() {
+    this.route.queryParams.subscribe(params => {
+      this.registerOpen = params['form'] === 'register';
+    });
+  }
+
+  constructor(private router: Router, private route: ActivatedRoute) { }
+
   headingtxt: string = 'Login';
   subtxt: string = 'ログイン';
   registerOpen: boolean = false;
@@ -23,6 +33,11 @@ export class LoginComponent {
   onLogin() {
     this.loginOk = true;
     console.log(this.login);
+    this.router.navigate([], {
+      relativeTo: this.route,
+      queryParams: { form: 'login' },
+      queryParamsHandling: 'merge'
+    });
   }
   onRegister() {
     this.registerOpen = false;
@@ -34,10 +49,20 @@ export class LoginComponent {
     this.registerOpen = true;
     this.headingtxt = 'Register';
     this.subtxt = '登録';
+    this.router.navigate([], {
+      relativeTo: this.route,
+      queryParams: { form: 'register' },
+      queryParamsHandling: 'merge'
+    });
   }
   loadLoginForm() {
     this.registerOpen = false;
     this.headingtxt = 'Login';
     this.subtxt = 'ログイン';
+    this.router.navigate([], {
+      relativeTo: this.route,
+      queryParams: { form: 'login' },
+      queryParamsHandling: 'merge'
+    });
   }
 }

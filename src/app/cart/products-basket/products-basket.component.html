@@ -1,0 +1,29 @@
+<div class="products-basket">
+    <ul class="product-items">
+        <li *ngFor="let selected of selectedProducts">
+            <div class="row">
+                <div class="col-5">
+                    <div class="item-basket">
+                        <div class="product-img">
+                            <img [src]="selected.image" [alt]="selected.altimg" class="img-fluid">
+                        </div>
+                        <div class="product-excerpt">
+                            <h3>{{ selected.name }}</h3>
+                            <p>{{ selected.excerpt }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="item-price">
+                        <span>${{ selected.price }}</span>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="item-subprice">
+                        <span>${{ selected.price }}</span>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

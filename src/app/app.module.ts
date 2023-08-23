@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { HomeModule } from './home/home.module';
 import { StoreModule } from './store/store.module';
+import { CartModule } from './cart/cart.module';
 import { LoginModule } from './login/login.module';
 
 
@@ -21,6 +22,7 @@ import { LoginModule } from './login/login.module';
     SharedModule,
     HomeModule,
     StoreModule,
+    CartModule,
     LoginModule
   ],
   providers: [],
