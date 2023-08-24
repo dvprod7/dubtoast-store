@@ -101,10 +101,10 @@
         </div>
     </div>
     <!-- Toast Message -->
-    <div [id]="'productToast--' + product.id" class="toast" [class.show]="alertMsg" role="alert" aria-live="assertive" aria-atomic="true">
+    <div [id]="'productToast--' + product.id" class="toast" [class.show]="toastVisibility[product.id]" role="alert" aria-live="assertive" aria-atomic="true">
         <div class="toast-header">
             <span class="me-auto">Product Added</span>
-            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            <button (click)="dismissToast(product)" type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
         </div>
         <div class="toast-body">
             <span>You purchased {{ product.name }}</span>

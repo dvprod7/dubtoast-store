@@ -1,10 +1,17 @@
 <div class="products-basket">
-    <ul class="product-items">
+    <ul class="product-items" *ngIf="!emptyBasket; else emptyMsg">
         <li *ngFor="let selected of selectedProducts">
             <div class="row">
                 <div class="col-5">
                     <div class="item-basket">
                         <div class="product-img">
+                            <button class="remove-item-btn" (click)="removeProduct(selected)" title="Remove Item">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="12" r="12" fill="#DD6031"/>
+                                    <path d="M6 6L18 18" stroke="#FBFFFE" stroke-width="2"/>
+                                    <path d="M6 18L18 6" stroke="#FBFFFE" stroke-width="2"/>
+                                </svg>                                    
+                            </button>
                             <img [src]="selected.image" [alt]="selected.altimg" class="img-fluid">
                         </div>
                         <div class="product-excerpt">
@@ -19,11 +26,16 @@
                     </div>
                 </div>
                 <div class="col-4">
-                    <div class="item-subprice">
+                    <div class="item-subtotal">
                         <span>${{ selected.price }}</span>
                     </div>
                 </div>
             </div>
         </li>
     </ul>
+    <ng-template #emptyMsg>
+        <div class="empty-msg">
+            <p>This seems empty, please add me some packs to start your music creation</p>
+        </div>
+    </ng-template>
 </div>

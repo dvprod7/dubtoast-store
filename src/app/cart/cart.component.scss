@@ -35,6 +35,55 @@
         }
     }
 
+    .cart-total {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        span {
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            padding-right: 0.5rem;
+        }
+        h3 {
+            text-transform: uppercase;
+            font-family: $heading-font;
+            font-size: 3.5rem;
+        }
+    }
+
+    .cart-options {
+        padding: 2rem 0;
+        a {
+            text-decoration: none;
+            margin: 0;
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+            column-gap: 10px;
+            justify-content: center;
+            align-items: center;
+            background-color: $primary-orange;
+            border: none;
+            padding: 0.5rem;
+            transition: all 0.3s ease;
+            @include m576 {
+                width: 70%;
+            }
+            @include m992 {
+                width: 50%;
+            }
+            span {
+                font-family: $heading-font;
+                text-transform: uppercase;
+                color: $white;
+            }
+            &:hover {
+                transition: all 0.3s ease;
+                background-color: $secondary-orange;
+            }
+        }
+    }
+
     hr {
         width: 100%;
         border-top: 3px solid $primary-orange;

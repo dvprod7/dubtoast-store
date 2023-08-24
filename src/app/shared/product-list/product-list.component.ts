@@ -11,7 +11,7 @@ import { ProductSelectionService } from './product-selection.service';
 export class ProductListComponent implements OnInit{
 
   products: Product[] = [];
-  alertMsg: boolean = false;
+  toastVisibility: { [productId: number]: boolean } = {};
 
   constructor(private http: HttpClient, private productSelectionService: ProductSelectionService) {}
 
@@ -32,8 +32,15 @@ export class ProductListComponent implements OnInit{
 
   onSelectProduct(product: Product) {
     this.productSelectionService.addSelectedProduct(product);
-    console.log("producto añadido");
-    console.table(product);
-    this.alertMsg = true;
+    /* console.log("producto añadido");
+    console.table(product); */
+    this.toastVisibility[product.id] = true;
+    setTimeout(() => {
+        this.toastVisibility[product.id] = false;
+    }, 3000);
+  }
+
+  dismissToast(product: Product) {
+    this.toastVisibility[product.id] = false;
   }
 }
