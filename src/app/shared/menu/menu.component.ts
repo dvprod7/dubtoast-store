@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-menu',
@@ -6,6 +6,8 @@ import { Component, HostListener } from '@angular/core';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent {
+  @ViewChild('menuCheckbox', { static: true }) menuCheckbox!: ElementRef<HTMLInputElement>;
+  isMenuOpen = false;
   isMenuFixed = false;
 
   @HostListener('window:scroll', ['$event'])
@@ -17,5 +19,24 @@ export class MenuComponent {
     } else if (scrollPosition === 0 && this.isMenuFixed) {
       this.isMenuFixed = false;
     }
+  }
+  
+  toggleMenu() {
+    if (!this.isMenuOpen) {
+      this.isMenuOpen = this.menuCheckbox.nativeElement.checked;
+    } else {
+      /* Adds a little time to execute the closing animation 
+      for the menu and change the state for isMenuOpen */
+      setTimeout(() => { 
+        this.isMenuOpen = this.menuCheckbox.nativeElement.checked;
+      }, 500);
+    }
+  }
+
+  uncheckInput() {
+    this.menuCheckbox.nativeElement.checked = false;
+    setTimeout(() => { 
+      this.isMenuOpen = false;
+    }, 500);
   }
 }

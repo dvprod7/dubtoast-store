@@ -53,13 +53,13 @@
 
     .cart-options {
         padding: 2rem 0;
-        a {
+        .btn-op {
             text-decoration: none;
             margin: 0;
             display: flex;
             width: 100%;
             flex-wrap: wrap;
-            column-gap: 10px;
+            column-gap: 3px;
             justify-content: center;
             align-items: center;
             background-color: $primary-orange;
@@ -67,6 +67,7 @@
             padding: 0.5rem;
             transition: all 0.3s ease;
             @include m576 {
+                column-gap: 10px;
                 width: 70%;
             }
             @include m992 {
@@ -76,6 +77,10 @@
                 font-family: $heading-font;
                 text-transform: uppercase;
                 color: $white;
+                font-size: 0.8rem;
+                @include m576 { 
+                    font-size: 1rem;
+                }
             }
             &:hover {
                 transition: all 0.3s ease;
