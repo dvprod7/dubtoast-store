@@ -1,14 +1,24 @@
-import { Component, HostListener, ViewChild, ElementRef } from '@angular/core';
+import { Component, HostListener, ViewChild, ElementRef, OnInit } from '@angular/core';
+import { ProductSelectionService } from 'app/shared/product-list/product-selection.service';
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss']
 })
-export class MenuComponent {
+export class MenuComponent implements OnInit {
+  
   @ViewChild('menuCheckbox', { static: true }) menuCheckbox!: ElementRef<HTMLInputElement>;
   isMenuOpen = false;
   isMenuFixed = false;
+  cartItems: number = 0;
+
+  constructor(private productSelectionService: ProductSelectionService) {}
+
+  ngOnInit() {
+    this.updateCartItems();
+    console.log("Ahora hay " + this.cartItems + " productos")
+  }
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(event: any): void {
@@ -38,5 +48,9 @@ export class MenuComponent {
     setTimeout(() => { 
       this.isMenuOpen = false;
     }, 500);
+  }
+
+  updateCartItems() {
+    this.cartItems = this.productSelectionService.itemsBasket;
   }
 }

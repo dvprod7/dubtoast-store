@@ -25,6 +25,17 @@
         }
     }
 
+    .cart-count {
+        position: absolute;
+        right: 33%;
+        top: 0;
+        color: $white;
+        background-color: $red;
+        padding: 5px 10px;
+        border-radius: 4rem;
+        font-size: 12.8px;
+    }
+
     .menu-container {
         display: flex;
         width: 100%;
@@ -143,6 +154,7 @@
             }
             li {
                 width: 100%;
+                position: relative;
                 &:nth-child(1) {
                     text-align: center;
                 }

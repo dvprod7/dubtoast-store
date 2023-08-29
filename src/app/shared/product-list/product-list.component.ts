@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Product } from 'app/shared/product-list/product.model';
 import { ProductSelectionService } from './product-selection.service';
@@ -11,6 +11,7 @@ import { ProductSelectionService } from './product-selection.service';
 export class ProductListComponent implements OnInit{
 
   products: Product[] = [];
+  cartItems: number = 0;
   toastVisibility: { [productId: number]: boolean } = {};
 
   constructor(private http: HttpClient, private productSelectionService: ProductSelectionService) {}
@@ -38,6 +39,11 @@ export class ProductListComponent implements OnInit{
     setTimeout(() => {
         this.toastVisibility[product.id] = false;
     }, 3000);
+    this.updateCartItems();
+  }
+
+  updateCartItems() {
+    this.cartItems = this.productSelectionService.totalOfBasket();
   }
 
   dismissToast(product: Product) {
